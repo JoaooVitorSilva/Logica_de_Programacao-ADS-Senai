@@ -9,22 +9,19 @@ public class GerenciadorNotas {
         System.out.print("Quantos alunos tem na turma? ");
         int quantidadeAlunos = scanner.nextInt();
 
-        // Declaração e criação dos arrays
         String[] nomes = new String[quantidadeAlunos];
         double[] notas = new double[quantidadeAlunos];
-        scanner.nextLine(); // Limpar buffer
+        scanner.nextLine();
 
-        // Entrada de dados
         for (int i = 0; i < quantidadeAlunos; i++) {
             System.out.print("Digite o nome do " + (i + 1) + "º aluno: ");
             nomes[i] = scanner.nextLine();
 
             System.out.print("Digite a nota de " + nomes[i] + ": ");
             notas[i] = scanner.nextDouble();
-            scanner.nextLine(); // Limpar buffer
+            scanner.nextLine();
         }
 
-        // Cálculos
         double somaNotas = 0;
         double maiorNota = notas[0];
         double menorNota = notas[0];
@@ -47,7 +44,6 @@ public class GerenciadorNotas {
 
         double mediaGeral = somaNotas / quantidadeAlunos;
 
-        // Relatório
         System.out.println("\n=== RELATÓRIO DA TURMA ===");
         System.out.printf("Média geral da turma: %.2f\n", mediaGeral);
         System.out.println("Maior nota: " + maiorNota + " - " + alunoMaiorNota);

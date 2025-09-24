@@ -20,13 +20,11 @@ public class EntradaSaida {
         System.out.print("Tem filhos? (true/false): ");
         boolean temFilhos = input.nextBoolean();
 
-        // Limpar buffer
         input.nextLine();
 
         System.out.print("Observações: ");
         String observacoes = input.nextLine();
 
-        // Saída formatada
         System.out.println("\n=== DADOS CADASTRADOS ===");
         System.out.println("Nome: " + nomeCompleto);
         System.out.println("Idade: " + idade + " anos");

@@ -3,7 +3,7 @@ package br.com.senai.Modulo4;
 public class CalculadoraAvancada {
 
     public static void main(String[] args) {
-        // Testando os métodos
+
         System.out.println("=== CALCULADORA AVANÇADA ===");
 
         double a = 15.5, b = 4.2;
@@ -26,7 +26,6 @@ public class CalculadoraAvancada {
         System.out.println("4.2 é positivo? " + ehPositivo(b));
     }
 
-    // Métodos básicos de cálculo
     public static double somar(double x, double y) {
         return x + y;
     }
@@ -42,7 +41,7 @@ public class CalculadoraAvancada {
     public static double dividir(double x, double y) {
         if (y == 0) {
             System.out.println("Erro: Divisão por zero!");
-            return Double.NaN; // Not a Number
+            return Double.NaN;
         }
         return x / y;
     }
@@ -57,7 +56,6 @@ public class CalculadoraAvancada {
         return expoente < 0 ? 1 / resultado : resultado;
     }
 
-    // Método recursivo - Fatorial
     public static long fatorial(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Fatorial não definido para números negativos");
@@ -68,14 +66,12 @@ public class CalculadoraAvancada {
         return n * fatorial(n - 1);
     }
 
-    // Método recursivo - Fibonacci
     public static long fibonacci(int n) {
         if (n <= 0) return 0;
         if (n == 1) return 1;
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
-    // Método para verificar se um número é primo
     public static boolean ehPrimo(int numero) {
         if (numero <= 1) return false;
         if (numero <= 3) return true;
@@ -89,7 +85,6 @@ public class CalculadoraAvancada {
         return true;
     }
 
-    // Métodos de validação
     public static boolean ehPar(int numero) {
         return numero % 2 == 0;
     }
@@ -98,7 +93,6 @@ public class CalculadoraAvancada {
         return numero > 0;
     }
 
-    // Método sobrecarregado (overloading)
     public static int maximo(int a, int b) {
         return (a > b) ? a : b;
     }

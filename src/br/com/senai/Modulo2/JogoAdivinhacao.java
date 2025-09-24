@@ -8,7 +8,7 @@ public class JogoAdivinhacao {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        int numeroSecreto = random.nextInt(100) + 1; // 1 a 100
+        int numeroSecreto = random.nextInt(100) + 1;
         int tentativa = 0;
         int numeroTentativas = 0;
         boolean acertou = false;

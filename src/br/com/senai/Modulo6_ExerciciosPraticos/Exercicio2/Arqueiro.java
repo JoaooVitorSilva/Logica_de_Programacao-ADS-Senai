@@ -5,7 +5,7 @@ public class Arqueiro extends Personagem {
 
     @Override
     public int atacar() {
-        if (Math.random() < 0.25) return ataque * 2; // crítico
+        if (Math.random() < 0.25) return ataque * 2;
         return ataque;
     }
 }

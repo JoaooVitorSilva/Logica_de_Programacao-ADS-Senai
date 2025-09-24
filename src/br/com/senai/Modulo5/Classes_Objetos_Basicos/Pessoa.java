@@ -1,14 +1,14 @@
 package br.com.senai.Modulo5.Classes_Objetos_Basicos;
 
-// Classe Pessoa
+
 public class Pessoa {
-    // Atributos (características)
+
     private String nome;
     private int idade;
     private double altura;
     private String email;
 
-    // Construtor padrão
+
     public Pessoa() {
         this.nome = "";
         this.idade = 0;
@@ -16,7 +16,7 @@ public class Pessoa {
         this.email = "";
     }
 
-    // Construtor com parâmetros
+
     public Pessoa(String nome, int idade, double altura, String email) {
         this.nome = nome;
         this.idade = idade;
@@ -24,7 +24,7 @@ public class Pessoa {
         this.email = email;
     }
 
-    // Métodos getters e setters
+
     public String getNome() {
         return nome;
     }
@@ -73,7 +73,6 @@ public class Pessoa {
         }
     }
 
-    // Métodos comportamentais
     public void apresentar() {
         System.out.println("Olá! Meu nome é " + nome);
         System.out.println("Tenho " + idade + " anos e " + altura + "m de altura");
@@ -97,7 +96,6 @@ public class Pessoa {
         return 0;
     }
 
-    // Método toString
     @Override
     public String toString() {
         return String.format("Pessoa{nome='%s', idade=%d, altura=%.2f, email='%s'}",

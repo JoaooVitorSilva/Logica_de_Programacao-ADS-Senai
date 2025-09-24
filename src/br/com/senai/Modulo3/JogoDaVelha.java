@@ -1,7 +1,6 @@
 package br.com.senai.Modulo3;
 
 import java.util.Scanner;
-import java.util.Random;
 
 public class JogoDaVelha {
     private static char[][] tabuleiro = new char[3][3];
@@ -77,21 +76,19 @@ public class JogoDaVelha {
     }
 
     private static boolean verificarVitoria(char jogador) {
-        // Verificar linhas
+
         for (int i = 0; i < 3; i++) {
             if (tabuleiro[i][0] == jogador && tabuleiro[i][1] == jogador && tabuleiro[i][2] == jogador) {
                 return true;
             }
         }
 
-        // Verificar colunas
         for (int j = 0; j < 3; j++) {
             if (tabuleiro[0][j] == jogador && tabuleiro[1][j] == jogador && tabuleiro[2][j] == jogador) {
                 return true;
             }
         }
 
-        // Verificar diagonais
         if (tabuleiro[0][0] == jogador && tabuleiro[1][1] == jogador && tabuleiro[2][2] == jogador) {
             return true;
         }

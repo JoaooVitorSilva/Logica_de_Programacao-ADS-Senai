@@ -5,13 +5,12 @@ import java.util.Random;
 
 public class AlgoritmosOrdenacao {
     public static void main(String[] args) {
-        // Criar array aleatório para testes
+
         int[] numeros = gerarArrayAleatorio(10);
 
         System.out.println("Array original:");
         mostrarArray(numeros);
 
-        // Teste Bubble Sort
         int[] arrayBubble = Arrays.copyOf(numeros, numeros.length);
         long inicio = System.nanoTime();
         bubbleSort(arrayBubble);
@@ -20,7 +19,6 @@ public class AlgoritmosOrdenacao {
         mostrarArray(arrayBubble);
         System.out.println("Tempo: " + (fim - inicio) / 1000000.0 + " ms");
 
-        // Teste Selection Sort
         int[] arraySelection = Arrays.copyOf(numeros, numeros.length);
         inicio = System.nanoTime();
         selectionSort(arraySelection);
@@ -29,7 +27,6 @@ public class AlgoritmosOrdenacao {
         mostrarArray(arraySelection);
         System.out.println("Tempo: " + (fim - inicio) / 1000000.0 + " ms");
 
-        // Teste com array nativo do Java
         int[] arrayNativo = Arrays.copyOf(numeros, numeros.length);
         inicio = System.nanoTime();
         Arrays.sort(arrayNativo);
@@ -61,7 +58,6 @@ public class AlgoritmosOrdenacao {
         System.out.println("]");
     }
 
-    // Bubble Sort - O(n²)
     private static void bubbleSort(int[] array) {
         int n = array.length;
         boolean houveTroca;
@@ -71,7 +67,7 @@ public class AlgoritmosOrdenacao {
 
             for (int j = 0; j < n - i - 1; j++) {
                 if (array[j] > array[j + 1]) {
-                    // Troca
+
                     int temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
@@ -79,28 +75,24 @@ public class AlgoritmosOrdenacao {
                 }
             }
 
-            // Se não houve troca, o array já está ordenado
             if (!houveTroca) {
                 break;
             }
         }
     }
 
-    // Selection Sort - O(n²)
     private static void selectionSort(int[] array) {
         int n = array.length;
 
         for (int i = 0; i < n - 1; i++) {
             int menorIndice = i;
 
-            // Encontrar o menor elemento no restante do array
             for (int j = i + 1; j < n; j++) {
                 if (array[j] < array[menorIndice]) {
                     menorIndice = j;
                 }
             }
 
-            // Trocar o menor elemento com o primeiro elemento não ordenado
             if (menorIndice != i) {
                 int temp = array[i];
                 array[i] = array[menorIndice];

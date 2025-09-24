@@ -18,7 +18,6 @@ public class SistemaNotas {
         System.out.print("Digite a nota do trabalho: ");
         double trabalho = scanner.nextDouble();
 
-        // Cálculo da média ponderada
         double media = (nota1 * 3 + nota2 * 3 + trabalho * 4) / 10;
 
         System.out.println("\n=== BOLETIM ===");

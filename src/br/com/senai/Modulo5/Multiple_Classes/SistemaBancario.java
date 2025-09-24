@@ -1,7 +1,5 @@
 package br.com.senai.Modulo5.Multiple_Classes;
 
-// Classe principal do sistema bancário
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,7 +8,7 @@ public class SistemaBancario {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // Criar algumas contas para demonstração
+
         contas.add(new ContaBancaria("Ana Costa", "Corrente", 1000.0));
         contas.add(new ContaBancaria("Carlos Silva", "Poupança", 2500.0));
         contas.add(new ContaBancaria("Beatriz Lima", "Corrente", 500.0));
@@ -20,7 +18,7 @@ public class SistemaBancario {
         do {
             mostrarMenuPrincipal();
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar buffer
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -80,7 +78,7 @@ public class SistemaBancario {
 
         System.out.print("Depósito inicial: R$ ");
         double deposito = scanner.nextDouble();
-        scanner.nextLine(); // Limpar buffer
+        scanner.nextLine();
 
         ContaBancaria novaConta = new ContaBancaria(titular, tipo, deposito);
         contas.add(novaConta);
@@ -108,7 +106,7 @@ public class SistemaBancario {
 
         System.out.print("Selecione o número da conta: ");
         int indice = scanner.nextInt() - 1;
-        scanner.nextLine(); // Limpar buffer
+        scanner.nextLine();
 
         if (indice >= 0 && indice < contas.size()) {
             return contas.get(indice);
@@ -125,7 +123,7 @@ public class SistemaBancario {
         if (conta != null) {
             System.out.print("Valor do depósito: R$ ");
             double valor = scanner.nextDouble();
-            scanner.nextLine(); // Limpar buffer
+            scanner.nextLine();
 
             conta.depositar(valor);
         }
@@ -138,7 +136,7 @@ public class SistemaBancario {
         if (conta != null) {
             System.out.print("Valor do saque: R$ ");
             double valor = scanner.nextDouble();
-            scanner.nextLine(); // Limpar buffer
+            scanner.nextLine();
 
             conta.sacar(valor);
         }
@@ -156,7 +154,7 @@ public class SistemaBancario {
             if (contaDestino != null && contaDestino != contaOrigem) {
                 System.out.print("Valor da transferência: R$ ");
                 double valor = scanner.nextDouble();
-                scanner.nextLine(); // Limpar buffer
+                scanner.nextLine();
 
                 contaOrigem.transferir(contaDestino, valor);
             } else if (contaDestino == contaOrigem) {

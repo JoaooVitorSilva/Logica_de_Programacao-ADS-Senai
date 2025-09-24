@@ -1,6 +1,6 @@
 package br.com.senai.Modulo5.Multiple_Classes;
 
-// Classe ContaBancaria
+
 public class ContaBancaria {
     private String numeroConta;
     private String titular;
@@ -8,7 +8,6 @@ public class ContaBancaria {
     private String tipoConta;
     private static int proximoNumero = 1000;
 
-    // Construtor
     public ContaBancaria(String titular, String tipoConta, double depositoInicial) {
         this.numeroConta = String.valueOf(proximoNumero++);
         this.titular = titular;
@@ -16,13 +15,11 @@ public class ContaBancaria {
         this.saldo = depositoInicial;
     }
 
-    // Getters
     public String getNumeroConta() { return numeroConta; }
     public String getTitular() { return titular; }
     public double getSaldo() { return saldo; }
     public String getTipoConta() { return tipoConta; }
 
-    // Métodos de operação
     public boolean depositar(double valor) {
         if (valor > 0) {
             saldo += valor;

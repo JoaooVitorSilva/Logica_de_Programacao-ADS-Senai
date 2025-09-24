@@ -1,9 +1,9 @@
 package br.com.senai.Modulo5.Classes_Objetos_Basicos;
 
-// Classe principal para testar
+
 public class TestePessoa {
     public static void main(String[] args) {
-        // Criando objetos usando diferentes construtores
+
         Pessoa pessoa1 = new Pessoa();
         pessoa1.setNome("Maria Silva");
         pessoa1.setIdade(25);
@@ -12,7 +12,6 @@ public class TestePessoa {
 
         Pessoa pessoa2 = new Pessoa("João Santos", 30, 1.80, "joao@email.com");
 
-        // Testando os métodos
         System.out.println("=== PESSOA 1 ===");
         pessoa1.apresentar();
         System.out.println("Maior de idade? " + (pessoa1.ehMaiorDeIdade() ? "Sim" : "Não"));
